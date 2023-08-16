@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari laferrari (PR ORBIT)</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style type="text/css">
+
+:root {
+--primary: #fff200;
+--bg: #010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff200;
+    min-height: 2000px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 3.5px solid #fff200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+font-family: 'Tilt Prism', cursive;
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+    
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.6);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+/*Hero Section*/
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('img/FS20 (1).jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 25%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    color: #fff;
+    line-height: 1.2;
+    text-shadow: -0.6px 0 black, 0 0.7px black, 0.6px 0 black, 0 -0.6px black; 
+    
+}
+
+.hero .content h1 span {
+    color: #fff200;
+    text-shadow: -1.3px 0 black, 0 1.3px black, 1.3px 0 black, 0 -1.3px black; 
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/*  Media Quiries */
+
+/*Laptop*/
+@media (max-width: 1366px) {
+html{
+    font-size : 75%;
+}
+}
+/*Tablet*/
+@media (max-width: 768px) {
+html{
+    font-size : 62.5%;
+}
+}
+/*Mobile Phone*/
+@media (max-width: 450px) {
+html{
+    font-size : 55%;
+}
+}
+
+    </style>
+</head>
+<body>
+    <!--Navbar Start-->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><span>Ferrari</span> SF90</a>
+        <div class="navbar-nav">
+            <a href="#home">Beranda</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Varian</a>
+            <a href="#contact">Kontak</a>
+          </div>
+
+          <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="share"><i data-feather="share-2"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+          </div>
+
+          </nav>
+          <!--Navbar End-->
+
+         <!--Hero Section Start-->
+         <section class="hero" id="home">
+            <main class="content">
+                <h1><span>Ferrari</span> <i>SF90</i></h1>
+                <p>Ferrari Jakarta menghadirkan SF90 Spider untuk memanjakan semua penggemarnya di Indonesia.6</p>
+                <a href="#" class="cta">Ferrari</a>
+            </main>
+         </section>
+         <!--Hero Section End-->
+
+
+     <!-- Feathers Icons -->
+     <script>
+        feather.replace()
+      </script>
+    
+</body>
+</html>
