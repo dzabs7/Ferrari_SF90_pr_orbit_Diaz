@@ -21,11 +21,14 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
     color: #fff200;
-    min-height: 2000px;
 }
 .navbar {
     display: flex;
@@ -76,7 +79,7 @@ font-family: 'Tilt Prism', cursive;
 
 .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.6);
-    transition: 0.2s linear;
+    transition: 0.5s linear;
 }
 
 .navbar .navbar-extra a {
@@ -102,8 +105,9 @@ font-family: 'Tilt Prism', cursive;
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 25%);
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 50%);
 }
 
 .hero .content {
@@ -129,10 +133,161 @@ font-family: 'Tilt Prism', cursive;
     margin-top: 1rem;
     color: #fff;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    line-height: 1.1;
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #010101;
+    background: var(--primary);
+    border: 2.3px solid #010101;
+    border-radius: 16px;
+    padding: 17.4px;
+}
+
+/* About Section */
+.about, 
+.menu,
+.contact {
+    padding: 8rem 7% 1.4rem;
+    color: #fff;
+}
+
+
+
+.about h2, 
+.menu h2,
+.contact h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+    color: #fff200;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    max-width: 50rem;
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+/* Menu Section */
+.menu h2, 
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+.menu p,
+.contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+    
+}
+
+.menu .row {
+    display: flex;
+    margin-top: 5rem;
+    flex: 1;
+    flex-direction: row;
+}
+
+.menu-card {
+    text-align: center;
+    width: 90%;
+}
+
+.menu .row .menu-card img {
+    justify-content: space-between;
+    border-radius: 50%;
+    width: 80%;
+    margin: 1rem;
+}
+
+.menu .row .menu-card .menu-card-title {
+    margin-top: 1rem auto 0.5rem;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background-color: #ffee00;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .credit  p {
+    color: #535353;
+}
+
+footer .socials a {
+    color: #535353;
+    margin: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+    color: var(--bg);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #535335;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
 }
 
 /*  Media Quiries */
-
 /*Laptop*/
 @media (max-width: 1366px) {
 html{
@@ -156,19 +311,19 @@ html{
 </head>
 <body>
     <!--Navbar Start-->
+    <nav></nav>
     <nav class="navbar">
         <a href="#" class="navbar-logo"><span>Ferrari</span> SF90</a>
-        <div class="navbar-nav">
+        <div class="navbar-nav background-merah">
             <a href="#home">Beranda</a>
-            <a href="#about">Tentang Kami</a>
+            <a href="#about">Tentang</a>
             <a href="#menu">Varian</a>
-            <a href="#contact">Kontak</a>
           </div>
 
           <div class="navbar-extra">
             <a href="#" id="search"><i data-feather="search"></i></a>
             <a href="#" id="share"><i data-feather="share-2"></i></a>
-            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            <a href="#" id="hamburger-menu" class="background-merah"><i data-feather="menu"></i></a>
           </div>
 
           </nav>
@@ -178,12 +333,85 @@ html{
          <section class="hero" id="home">
             <main class="content">
                 <h1><span>Ferrari</span> <i>SF90</i></h1>
-                <p>Ferrari Jakarta menghadirkan SF90 Spider untuk memanjakan semua penggemarnya di Indonesia.6</p>
-                <a href="#" class="cta">Ferrari</a>
+                <p id="">Mobil listrik Ferrari baru ini memiliki spesifikasi supercar ekstrem serupa dengan performa yang memecahkan rekor seperti SF90 Stradale.</p>
+                <a href="#about" class="cta"><u>Lihat Selengkapnya</u></a>
             </main>
+            
          </section>
          <!--Hero Section End-->
 
+         <!--About Section Start -->
+         <section id="about" class="about">
+            <h2>Tentang <span>Ferrari</span></h2>
+
+            <div class="row">
+                <div class="about-img">
+                    <img src="img/Tentang-Ferrari.jpg" alt="Apa Itu Ferrari?">
+                </div>
+                <div class="content">
+                    <h3>Apa Itu Ferrari?</h3>
+                    <p>Ferrari merupakan brand mewah yang berasal dari Italia dengan perjalanan panjang. Perusahaan ini didirikan oleh Enzo Ferrari pada tahun 1947 di kota Maranello, Italia. Sebelum mendirikan Ferrari, Enzo Ferrari merupakan mantan pembalap sekaligus manajer tim balap Alfa Romeo.</p>
+                    <p>Salah satu mobil mewah yang di keluarkan oleh perusahaan Ferrari ini, adalah Ferrari SF90. Melihat dari informasi media otomotif luar negeri, Ferrari SF90 Spider ini dibanderol US$5.558 atau setara dengan Rp7,8 miliaran.</p>
+                    <p>Mobil ini hadir dengan basis yang sama dengan SF90 Stadale yang pernah Ferrari Indonesia rilis di Maret 2021. Mesinnya pun sama, yaitu mesin V8 dengan twin turbo yang bisa menggelontorkan tenaga sebesar 720 HP hybrid.</p>
+                </div>
+            </div>
+         </section>
+         <!--About Section End -->
+
+         <!-- Varian Section Start -->
+         <section id="menu" class="menu">
+            <h2>Varian Warna <span><i>SF90</i></span></h2>
+            <p>Ferrari SF90 menghadirkan berbagai varian warna yang dapat menarik perhatian. Berikut adalah varian warna Ferrari SF90 Spider.</p>
+
+            <div class="row">
+                <div class="menu-card">
+                    <img src="img/1 edit.jpg" alt="Merah" class="menu-card-img">
+                    <h3 class="menu-card-title">- Merah -</h3>
+                </div>
+                <div class="menu-card">
+                    <img src="img/2.jpeg" alt="Kuning" class="menu-card-img">
+                    <h3 class="menu-card-title">- Kuning -</h3>
+                </div>
+                <div class="menu-card">
+                    <img src="img/3.jpg" alt="Hitam" class="menu-card-img">
+                    <h3 class="menu-card-title">- Hitam -</h3>
+                </div>
+                <div class="menu-card">
+                    <img src="img/4.jpg" alt="Biru" class="menu-card-img">
+                    <h3 class="menu-card-title">- Biru -</h3>
+                </div>
+                <div class="menu-card">
+                    <img src="img/5 e.jpg" alt="Putih" class="menu-card-img">
+                    <h3 class="menu-card-title">- Putih -</h3>
+                </div>
+                <div class="menu-card">
+                    <img src="img/6.jpg" alt="Hijau" class="menu-card-img">
+                    <h3 class="menu-card-title">- Hijau -</h3>
+                </div>
+            </div>
+         </section>
+         <!-- Varian Section End -->
+
+        <!-- Footer Start -->
+        <footer>
+            <div class="socials">
+                <a href="https://instagram.com/dzabs_?igshid=NTc4MTIwNjQ2YQ=="><i data-feather="instagram"></i></a>
+                <a href="https://www.facebook.com/diaz.sudira?mibextid=b06tZ0"><i data-feather="facebook"></i></a>
+                <a href="#"><i data-feather="twitter"></i></a>
+                <a href="https://youtube.com/@diazabisudira7319"><i data-feather="youtube"></i></a>
+            </div>
+
+            <div class="links">
+                <a href="#home">Beranda</a>
+                <a href="#about">Tentang</a>
+                <a href="#menu">Varian</a>
+            </div>
+
+            <div class="credit">
+                <p>Created by <a href="">DIAZ ABI .S</a> | &copy; 2023.</p>
+            </div>
+        </footer>
+        <!-- Footer End -->
 
      <!-- Feathers Icons -->
      <script>
